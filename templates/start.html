@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        
+        body{
+            
+             background-repeat: no-repeat; 
+             background-size: cover;
+            background-color: rgb(42, 100, 218);
+            background-attachment: fixed;
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px;
+            align-items: center;
+            display: flex ;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        h2{
+            cursor: pointer;
+        }
+        li{
+            flex-direction: row;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .navbar ul a{
+            text-decoration: none;
+            color: #fff;
+             
+        }
+        .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0%;
+            background:#33ff00;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -2vh;
+            transition:ease-o= 0.5s;
+        }
+        .navbar ul li:hover::after{
+            content: '';
+            height: 3px;
+            width: 110%;
+            background:#33ff00;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -2vh;
+            transition: 0.5s;
+        }
+        .logo h2 a{
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(231, 255, 14);
+        }
+       
+        .banner{
+            background-color: rgb(125, 143, 19);
+        }
+        
+    </style>
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo"><h2><a href="/contact"> Diabetic Retinopathy</a></h2></div> 
+           
+        </div>
+    </div>
+    {% block body %} {% endblock %}
+    <br>
+    <br>
+</body>
+</html>
